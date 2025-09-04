@@ -1,7 +1,7 @@
 ### Soal 1
 Modifikasi kode pada baris 3 VS Code agar mendapatkan keluaran berikut
 
-![Foto Soal](img/Pasted image 20250904142039.png)
+![Foto Soal](img/Pasted_image_20250904142039.png)
 
 ### Jawab
 `void main() {`
@@ -15,7 +15,7 @@ Modifikasi kode pada baris 3 VS Code agar mendapatkan keluaran berikut
 `}`
 
 Hasil: 
-![Foto Hasil](img/Pasted image 20250904142808.png)
+![Foto Hasil](img/Pasted_image_20250904142808.png)
 
 ### Soal 2
 Mengapa sangat penting untuk memahami bahasa pemrograman Dart sebelum kita menggunakan framework Flutter? Jelaskan!
