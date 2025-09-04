@@ -1,7 +1,7 @@
 ### Soal 1
 Modifikasi kode pada baris 3 VS Code agar mendapatkan keluaran berikut
 
-![[img/Pasted image 20250904142039.png]]
+![Foto Soal](img/Pasted image 20250904142039.png)
 
 ### Jawab
 `void main() {`
@@ -15,7 +15,7 @@ Modifikasi kode pada baris 3 VS Code agar mendapatkan keluaran berikut
 `}`
 
 Hasil: 
-![[img/Pasted image 20250904142808.png]]
+![Foto Hasil](img/Pasted image 20250904142808.png)
 
 ### Soal 2
 Mengapa sangat penting untuk memahami bahasa pemrograman Dart sebelum kita menggunakan framework Flutter? Jelaskan!
@@ -41,12 +41,19 @@ Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan _Null Safety_ da
 
 Contoh penggunaan *null safety* dan *late variable*: 
 `void main() {`
+
   `String? nullableVar;       // Bisa null`
+
   `late String lateVar;       // Harus diinisialisasi sebelum digunakan`
 
+
   `print(nullableVar);        // Output: null`
+
   `// print(lateVar);         // Runtime error: belum diinisialisasi`
 
+
   `lateVar = "Hello Dart!";`
+
   `print(lateVar);            // Output: Hello Dart!`
+
 `}`
