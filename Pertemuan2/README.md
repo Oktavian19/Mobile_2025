@@ -4,15 +4,13 @@ Modifikasi kode pada baris 3 VS Code agar mendapatkan keluaran berikut
 ![Foto Soal](img/Pasted_image_20250904142039.png)
 
 ### Jawab
-`void main() {`
-
-  `for (int i = 21; i > 8; i--) {`
-
-    `print('Nama saya adalah Okta, sekarang berumur $i');`
-
-  `}`
-
-`}`
+```
+void main() {
+  for (int i = 21; i > 8; i--) {
+    print('Nama saya adalah Okta, sekarang berumur $i');
+  }
+}
+```
 
 Hasil: 
 ![Foto Hasil](img/Pasted_image_20250904142808.png)
@@ -40,20 +38,16 @@ Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan _Null Safety_ da
 *null safety* digunakan untuk menghindari pembuatan variabel *null* secara tidak sengaja, sedangkan *late variable* hanya menunda inisialisasi variabel (harus bukan null ketika digunakan).
 
 Contoh penggunaan *null safety* dan *late variable*: 
-`void main() {`
+```
+void main() {
+  String? nullableVar;       // Bisa null
+  late String lateVar;       // Harus diinisialisasi sebelum digunakan
 
-  `String? nullableVar;       // Bisa null`
+  print(nullableVar);        // Output: null
+  // print(lateVar);         // Runtime error: belum diinisialisasi
+  
+  lateVar = "Hello Dart!";
+  print(lateVar);            // Output: Hello Dart!
 
-  `late String lateVar;       // Harus diinisialisasi sebelum digunakan`
-
-
-  `print(nullableVar);        // Output: null`
-
-  `// print(lateVar);         // Runtime error: belum diinisialisasi`
-
-
-  `lateVar = "Hello Dart!";`
-
-  `print(lateVar);            // Output: Hello Dart!`
-
-`}`
+}
+```
