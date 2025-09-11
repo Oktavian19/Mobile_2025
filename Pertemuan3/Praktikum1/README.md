@@ -17,7 +17,7 @@ if (test == "test2") print("Test2 again");
 Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan!
 
 ### Jawab
-![Foto Soal](img\image.png)
+![Foto Soal](img/image.png)
 
 Variabel test memiliki nilai test2 sehingga dart melakukan print Test2. Kemudian variabel test dicek kembali untuk melakukan print Test2 again
 
@@ -38,3 +38,5 @@ Terjadi 2 error pada kode tersebut. Error pertama mengarah pada duplikasi pada i
     print("Kebenaran");
   }
 ```
+
+![Foto Soal](img/image2.png)
