@@ -1,16 +1,21 @@
 ### Langkah 1
 Ketik atau salin kode program berikut ke dalam fungsi main().
 ```
-String test = "test2";
-if (test == "test1") {
-   print("Test1");
-} else If (test == "test2") {
-   print("Test2");
-} Else {
-   print("Something else");
-}
+var gifts = {
+  // Key:    Value
+  'first': 'partridge',
+  'second': 'turtledoves',
+  'fifth': 1
+};
 
-if (test == "test2") print("Test2 again");
+var nobleGases = {
+  2: 'helium',
+  10: 'neon',
+  18: 2,
+};
+
+print(gifts);
+print(nobleGases);
 ```
 
 ### Langkah 2
@@ -18,24 +23,48 @@ Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jela
 
 ### Jawab
 ![Foto Soal](img/image.png)
-
-Variabel test memiliki nilai test2 sehingga dart melakukan print Test2. Kemudian variabel test dicek kembali untuk melakukan print Test2 again
+Pembuatan map dengan key bertipe string pada var gifts dan key bertipe angka pada var nobleGlass. Lalu isi dari map tersebut ditampilkan
 
 ### Langkah 3
 Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
 ```
-String test = "true";
-if (test) {
-   print("Kebenaran");
-}
+var mhs1 = Map<String, String>();
+gifts['first'] = 'partridge';
+gifts['second'] = 'turtledoves';
+gifts['fifth'] = 'golden rings';
+
+var mhs2 = Map<int, String>();
+nobleGases[2] = 'helium';
+nobleGases[10] = 'neon';
+nobleGases[18] = 'argon';
 ```
-Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan if/else.
+Apa yang terjadi ? Jika terjadi error, silakan perbaiki.
+
+Tambahkan elemen nama dan NIM Anda pada tiap variabel di atas (gifts, nobleGases, mhs1, dan mhs2). Dokumentasikan hasilnya dan buat laporannya!
 ### Jawab
-Terjadi 2 error pada kode tersebut. Error pertama mengarah pada duplikasi pada inisialisasi variabel. Solusinya adalah dengan menghapus tipe data string pada variabel test kedua atau mengubah nama variabel test menjadi test2 atau yang lain. Error kedua mengarah pada penggunaan variabel test sebagai kondisi if else. Variabel test merupakan String sehingga tidak memenuhi syarat kondisi. Solusinya adalah mengubah variabel test bertipe data boolean atau menambahkan pembanding pada variabel test seperti pada kode berikut
+Setiap key yang dipanggil akan mengisi value dari key yang sama.
 ```
-  test = "true";
-  if (test == "true") {
-    print("Kebenaran");
+  var mhs1 = Map<String, String>();
+  gifts['first'] = 'partridge';
+  gifts['second'] = 'turtledoves';
+  gifts['fifth'] = 'golden rings';
+
+  var mhs2 = Map<int, String>();
+  nobleGases[2] = 'helium';
+  nobleGases[10] = 'neon';
+  nobleGases[18] = 'argon';
+
+  var maps = [gifts, nobleGases, mhs1, mhs2];
+
+  for (var map in maps) {
+    if (map is Map<String, dynamic>) {
+      map['Nama'] = 'Oktavian Eka Ramadhan';
+      map['NIM'] = '2341720117';
+    } else {
+      map[0] = 'Oktavian Eka Ramadhan';
+      map[1] = '2341720117';
+    }
+    print(map);
   }
 ```
 
