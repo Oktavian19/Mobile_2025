@@ -1,42 +1,99 @@
 ### Langkah 1
 Ketik atau salin kode program berikut ke dalam fungsi main().
 ```
-String test = "test2";
-if (test == "test1") {
-   print("Test1");
-} else If (test == "test2") {
-   print("Test2");
-} Else {
-   print("Something else");
-}
-
-if (test == "test2") print("Test2 again");
+var list = [1, 2, 3];
+var list2 = [0, ...list];
+print(list1);
+print(list2);
+print(list2.length);
 ```
 
 ### Langkah 2
-Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan!
+Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
 
 ### Jawab
-![Foto Soal](img/image.png)
+![Foto Jawaban](img/image.png)
 
-Variabel test memiliki nilai test2 sehingga dart melakukan print Test2. Kemudian variabel test dicek kembali untuk melakukan print Test2 again
-
+Terjadi error karena list1 tidak pernah diinisialisasi. Sehingga list1 harus dihapus
+```
+void main() {
+  var list = [1, 2, 3];
+  var list2 = [0, ...list];
+  //print(list1);
+  print(list2);
+  print(list2.length);
+}
+```
 ### Langkah 3
 Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
 ```
-String test = "true";
-if (test) {
-   print("Kebenaran");
-}
+list1 = [1, 2, null];
+print(list1);
+var list3 = [0, ...?list1];
+print(list3.length);
 ```
-Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan if/else.
+Apa yang terjadi ? Jika terjadi error, silakan perbaiki.
+
+Tambahkan variabel list berisi NIM Anda menggunakan Spread Operators. Dokumentasikan hasilnya dan buat laporannya!
 ### Jawab
-Terjadi 2 error pada kode tersebut. Error pertama mengarah pada duplikasi pada inisialisasi variabel. Solusinya adalah dengan menghapus tipe data string pada variabel test kedua atau mengubah nama variabel test menjadi test2 atau yang lain. Error kedua mengarah pada penggunaan variabel test sebagai kondisi if else. Variabel test merupakan String sehingga tidak memenuhi syarat kondisi. Solusinya adalah mengubah variabel test bertipe data boolean atau menambahkan pembanding pada variabel test seperti pada kode berikut
+Operator spread dengan null safety kurang direkomendasikan karena list tidak akan bisa berisi null.
 ```
-  test = "true";
-  if (test == "true") {
-    print("Kebenaran");
-  }
+  var list1 = [1, 2, null];
+  print(list1);
+  var list3 = [0, ...list1];
+  print(list3.length);
+
+  var nim = [2341720117, ...list];
+  print(nim);
 ```
 
-![Foto Soal](img/image2.png)
+![Foto Jawaban](img/image2.png)
+
+### Langkah 4
+Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
+```
+var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
+print(nav);
+```
+Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Tunjukkan hasilnya jika variabel promoActive ketika true dan false.
+### Jawab
+Variabel promoActive perlu diinisialisasi terlebih dahulu dengan tipe data boolean(true/false)
+```
+  var promoActive = true;
+  var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
+  print(nav);
+```
+promoActive = true
+![Foto Jawaban](img/image3.png)
+promoActive = false
+![Foto Jawaban](img/image4.png)
+
+### Langkah 5
+Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
+```
+var nav2 = ['Home', 'Furniture', 'Plants', if (login case 'Manager') 'Inventory'];
+print(nav2);
+```
+Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Tunjukkan hasilnya jika variabel login mempunyai kondisi lain.
+### Jawab
+```
+  var login = 'Manager';
+  var nav2 = ['Home', 'Furniture', 'Plants', if (login case 'Manager') 'Inventory'];
+  print(nav2);
+```
+![Foto Jawaban](img/image5.png)
+Variabel login dengan value selain Manager
+![Foto Jawaban](img/image6.png)
+
+### Langkah 6
+Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
+```
+var listOfInts = [1, 2, 3];
+var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
+assert(listOfStrings[1] == '#1');
+print(listOfStrings);
+```
+Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Jelaskan manfaat Collection For dan dokumentasikan hasilnya.
+### Jawab
+Collection for berguna untuk melakukan loop langsung dari variabel sehingga mengurangi baris kode
+![Foto Jawaban](img/image7.png)
