@@ -6,8 +6,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   Widget get titleSection => Container(
-    margin: const EdgeInsets.only(bottom: 20),
-    padding: const EdgeInsets.all(8),
+    padding: const EdgeInsets.all(32),
     child: Row(
       children: [
         Expanded(
