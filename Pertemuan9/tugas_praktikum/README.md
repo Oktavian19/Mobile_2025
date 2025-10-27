@@ -1,16 +1,11 @@
-# tugas_praktikum
+# Tugas Praktikum
+## Praktikum 1
+!['Praktikum 1'](gif\Praktikum1.gif)
+## Praktikum 2
+!['Praktikum 1'](gif\Praktikum2.gif)
+## Tugas Praktikum
+!['Tugas Praktikum'](gif\TugasPraktikum.gif)
 
-A new Flutter project.
+3. ```void async``` berfungsi agar fungsi tersebut tetap berjalan dengan menunggu proses yang memakan waktu tanpa menghentikan aplikasi utama. Sedangkan void memiliki arti bahwa fungsi tersebut tidak mengembalikan nilai.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. ```@immutable``` dipakai untuk class yang tidak boleh diubah setelah dibuat. ```@override``` dipakai untuk metode yang mewarisi sifat suatu class lain (parent class). 
