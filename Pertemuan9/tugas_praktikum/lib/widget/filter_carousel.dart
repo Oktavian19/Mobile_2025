@@ -1,9 +1,15 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'filter_selector.dart';
 
 @immutable
 class PhotoFilterCarousel extends StatefulWidget {
-  const PhotoFilterCarousel({super.key});
+  final String imagePath;
+
+  const PhotoFilterCarousel({
+    super.key,
+    required this.imagePath,
+  });
 
   @override
   State<PhotoFilterCarousel> createState() => _PhotoFilterCarouselState();
@@ -15,7 +21,7 @@ class _PhotoFilterCarouselState extends State<PhotoFilterCarousel> {
     ...List.generate(
       Colors.primaries.length,
       (index) => Colors.primaries[(index * 4) % Colors.primaries.length],
-    )
+    ),
   ];
 
   final _filterColor = ValueNotifier<Color>(Colors.white);
@@ -30,9 +36,7 @@ class _PhotoFilterCarouselState extends State<PhotoFilterCarousel> {
       color: Colors.black,
       child: Stack(
         children: [
-          Positioned.fill(
-            child: _buildPhotoWithFilter(),
-          ),
+          Positioned.fill(child: _buildPhotoWithFilter()),
           Positioned(
             left: 0.0,
             right: 0.0,
@@ -45,12 +49,11 @@ class _PhotoFilterCarouselState extends State<PhotoFilterCarousel> {
   }
 
   Widget _buildPhotoWithFilter() {
-    return ValueListenableBuilder(
+    return ValueListenableBuilder<Color>(
       valueListenable: _filterColor,
       builder: (context, color, child) {
-        // Anda bisa ganti dengan foto Anda sendiri
-        return Image.network(
-          'https://thumbs.dreamstime.com/b/fresh-green-grass-background-exotic-asian-plant-beautiful-nature-rainforest-gorgeous-natural-mobile-wallpaper-282279765.jpg',
+        return Image.file(
+          File(widget.imagePath),
           color: color.withOpacity(0.5),
           colorBlendMode: BlendMode.color,
           fit: BoxFit.cover,
