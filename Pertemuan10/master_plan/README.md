@@ -23,3 +23,13 @@ Sebuah sistem yang mengelola plan secara statis dan menggunakan scrollcontroller
 4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
 - ![Gambar Hasil](img/gif2.gif)
 Mengelola plan ke bentuk provide agar aplikasi lebih efisien secara penggunaan memory dan menambahkan message di bagian footer untuk mengetahui berapa task yang sudah dicentang
+
+## Tugas Praktikum 3
+![Gambar Hasil](img/image3.png)
+
+2. Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!
+![Gambar Soal](img/soal.png)
+- Gambar tersebut menunjukkan bagaimana gambaran sebuah aplikasi berpindah halaman. Pada gambar ditunjukkan bagaimana halaman PlanCreator berganti ke halaman PlanScreen dengan NavigatorPush
+3. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+- ![Gambar Hasil](img/gif3.gif)
+Mengembangkan aplikasi agar dapat mengelompokkan task berdasarkan plan
