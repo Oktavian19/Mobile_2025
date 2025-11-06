@@ -119,3 +119,32 @@ API: [Google API](https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC)
     ```
 3. Capture hasil praktikum Anda berupa GIF dan lampirkan di README
 - ![SS Browser](img/gif8.gif)
+
+## Soal 17
+1. Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+- Warna background akan berubah ketika dialog close. Hal ini karena dialog akan mengganti color sesuai dengan button yang dipilih di akhir fungsi menggunakan ```setState```
+2. Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+    ```
+    actions: <Widget>[
+                TextButton(
+                child: const Text('Grey'),
+                onPressed: () {
+                    Navigator.pop(context, Colors.blueGrey.shade700);
+                },
+                ),
+                TextButton(
+                child: const Text('Indigo'),
+                onPressed: () {
+                    Navigator.pop(context, Colors.indigo.shade700);
+                },
+                ),
+                TextButton(
+                child: const Text('Teal'),
+                onPressed: () {
+                    Navigator.pop(context, Colors.teal.shade700);
+                },
+                ),
+            ],
+    ```
+3. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+- ![SS Browser](img/gif9.gif)
