@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:async/async.dart';
 // import 'package:http/http.dart';
 
 void main() {
@@ -30,6 +31,29 @@ class FuturePage extends StatefulWidget {
   State<FuturePage> createState() => _FuturePageState();
 }
 
+late Completer completer;
+
+Future getNumber() {
+  completer = Completer<int>();
+  calculate();
+  return completer.future;
+}
+
+// Future calculate() async {
+//   await Future.delayed(const Duration(seconds : 5));
+//   completer.complete(42);
+// }
+
+calculate() async {
+  try {
+    await Future.delayed(const Duration(seconds: 5));
+    completer.complete(42);
+    // throw Exception();
+  } catch (_) {
+    completer.completeError({});
+  }
+}
+
 class _FuturePageState extends State<FuturePage> {
   String result = '';
 
@@ -42,30 +66,30 @@ class _FuturePageState extends State<FuturePage> {
     //   return http.get(url);
     // }
 
-    Future<int> returnOneAsync() async {
-      await Future.delayed(const Duration(seconds: 3));
-      return 1;
-    }
+    // Future<int> returnOneAsync() async {
+    //   await Future.delayed(const Duration(seconds: 3));
+    //   return 1;
+    // }
 
-    Future<int> returnTwoAsync() async {
-      await Future.delayed(const Duration(seconds: 3));
-      return 2;
-    }
+    // Future<int> returnTwoAsync() async {
+    //   await Future.delayed(const Duration(seconds: 3));
+    //   return 2;
+    // }
 
-    Future<int> returnThreeAsync() async {
-      await Future.delayed(const Duration(seconds: 3));
-      return 3;
-    }
+    // Future<int> returnThreeAsync() async {
+    //   await Future.delayed(const Duration(seconds: 3));
+    //   return 3;
+    // }
 
-    Future count() async {
-      int total = 0;
-      total = await returnOneAsync();
-      total += await returnTwoAsync();
-      total += await returnThreeAsync();
-      setState(() {
-        result = total.toString();
-      });
-    }
+    // Future count() async {
+    //   int total = 0;
+    //   total = await returnOneAsync();
+    //   total += await returnTwoAsync();
+    //   total += await returnThreeAsync();
+    //   setState(() {
+    //     result = total.toString();
+    //   });
+    // }
 
     return Scaffold(
       appBar: AppBar(title: const Text('Back from the Future - Oktavian')),
@@ -76,7 +100,16 @@ class _FuturePageState extends State<FuturePage> {
             ElevatedButton(
               child: Text('GO!'),
               onPressed: () {
-                count();
+                // count();
+                getNumber()
+                    .then((value) {
+                      setState(() {
+                        result = value.toString();
+                      });
+                    })
+                    .catchError((e) {
+                      result = 'An error occurred';
+                    });
               },
             ),
             const Spacer(),
