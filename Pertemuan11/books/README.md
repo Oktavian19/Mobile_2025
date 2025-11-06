@@ -28,3 +28,9 @@ API: [Google API](https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC)
 - Kode return one,two dan three async masing-masing menunggu selama 3 detik untuk kemudian melakukan return angka 1, 2 dan 3. Ketiga return tersebut dipanggil pada fungsi ``` Future count() async``` dan akan melakukan update UI ketika ketiga proses tersebut selesai
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 - ![SS Browser](img/gif2.gif)
+
+## Soal 5
+1. Jelaskan maksud kode langkah 2 tersebut!
+- ```completer``` berisi baris yang mengembalikan calculate melalui ```completer.future```. Kode ini digunakan agar UI tidak menunggu proses ```calculate``` yang memakan waktu 5 detik sebelum memberikan return.
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+- ![SS Browser](img/gif3.gif)
