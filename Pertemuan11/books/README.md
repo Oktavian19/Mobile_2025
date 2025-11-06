@@ -34,3 +34,9 @@ API: [Google API](https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC)
 - ```completer``` berisi baris yang mengembalikan calculate melalui ```completer.future```. Kode ini digunakan agar UI tidak menunggu proses ```calculate``` yang memakan waktu 5 detik sebelum memberikan return.
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 - ![SS Browser](img/gif3.gif)
+
+## Soal 6
+1. Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+- Langkah 6 menambahkan kode untuk menangani error jika terjadi kegagalan
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+- ![SS Browser](img/gif3.gif)
