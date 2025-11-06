@@ -56,3 +56,18 @@ API: [Google API](https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC)
 ## Soal 10
 1. Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
 - Fungsi ```returnError``` dibuat untuk menampilkan pesan error ketika sebuah baris kode gagal dijalankan. Pada langkah 4, fungsi ```handleError()``` menggunakan ```try...catch...finally``` agar aplikasi tidak crash ketika mendapati error.
+
+## Soal 11
+1. Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+- ```    return Scaffold(
+      appBar: AppBar(title: Text('Current Location - Oktavian')),
+      body: Center(child: myWidget),
+    );```
+
+## Soal 12 
+1. Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+
+    ![SS Browser](img/image1.png)
+- Muncul, karena browser juga dapat mengakses lokasi dari laptop
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README!
+- ![SS Browser](img/gif6.gif)
