@@ -43,4 +43,8 @@ API: [Google API](https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC)
 
 ## Soal 7
 1. Capture hasil praktikum Anda berupa GIF dan lampirkan di README!
-- - ![SS Browser](img/gif4.gif)
+- ![SS Browser](img/gif4.gif)
+
+## Soal 8
+1. Jelaskan maksud perbedaan kode langkah 1 dan 4!
+- ```Future.wait()``` merupakan fungsi bawaan dart yang lebih modern dan ringkas. Fungsi itu dapat menjadikan beberapa function menjadi sebuah array. Sedangkan ```FutureGroup``` merupakan class dari package async yang menginisiasi function satu persatu.
