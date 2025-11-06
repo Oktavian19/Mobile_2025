@@ -83,3 +83,39 @@ API: [Google API](https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC)
 - Tidak ada, karena hanya menambahkan error handling ketika terjadi kegagalan saat koneksi sudah stabil
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 - ![SS Browser](img/gif7.gif)
+
+## Soal 15
+1. Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+- ```appBar: AppBar(title: const Text('Navigation First Screen - Oktavian')),```
+2. Silakan ganti dengan warna tema favorit Anda.
+- ```Colors.lightGreen;```
+
+## Soal 16
+1. Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+- Warna background akan berganti sesuai dengan button yang dipilih. Hal ini terjadi karena tiap tombol akan mengganti value variabel ```color``` yang ada di halaman navigation_first
+2. Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+    ```
+    ElevatedButton(
+                child: const Text('Grey'),
+                onPressed: () {
+                    color = Colors.blueGrey.shade700;
+                    Navigator.pop(context, color);
+                },
+                ),
+                ElevatedButton(
+                child: const Text('Indigo'),
+                onPressed: () {
+                    color = Colors.indigoAccent.shade700;
+                    Navigator.pop(context, color);
+                },
+                ),
+                ElevatedButton(
+                child: const Text('Teal'),
+                onPressed: () {
+                    color = Colors.teal.shade700;
+                    Navigator.pop(context, color);
+                },
+                ),
+    ```
+3. Capture hasil praktikum Anda berupa GIF dan lampirkan di README
+- ![SS Browser](img/gif8.gif)
