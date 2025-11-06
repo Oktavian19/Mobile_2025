@@ -57,10 +57,10 @@ class _FuturePageState extends State<FuturePage> {
                 .then((value) {
                   result = value.body.toString().substring(0, 450);
                   setState((){});
-                }).catchError((_){
-                  result = 'An error occurred';
-                  setState((){});
-                });
+                }).catchError((error) {
+                result = 'An error occurred';
+                setState(() {});
+              });
             },
           ),
           const Spacer(),
