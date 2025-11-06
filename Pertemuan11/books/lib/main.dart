@@ -66,20 +66,20 @@ class _FuturePageState extends State<FuturePage> {
     //   return http.get(url);
     // }
 
-    Future<int> returnOneAsync() async {
-      await Future.delayed(const Duration(seconds: 3));
-      return 1;
-    }
+    // Future<int> returnOneAsync() async {
+    //   await Future.delayed(const Duration(seconds: 3));
+    //   return 1;
+    // }
 
-    Future<int> returnTwoAsync() async {
-      await Future.delayed(const Duration(seconds: 3));
-      return 2;
-    }
+    // Future<int> returnTwoAsync() async {
+    //   await Future.delayed(const Duration(seconds: 3));
+    //   return 2;
+    // }
 
-    Future<int> returnThreeAsync() async {
-      await Future.delayed(const Duration(seconds: 3));
-      return 3;
-    }
+    // Future<int> returnThreeAsync() async {
+    //   await Future.delayed(const Duration(seconds: 3));
+    //   return 3;
+    // }
 
     // Future count() async {
     //   int total = 0;
@@ -91,26 +91,31 @@ class _FuturePageState extends State<FuturePage> {
     //   });
     // }
 
-    void returnFG() {
-      // FutureGroup<int> futureGroup = FutureGroup<int>();
-      // futureGroup.add(returnOneAsync());
-      // futureGroup.add(returnTwoAsync());
-      // futureGroup.add(returnThreeAsync());
-      // futureGroup.close();
-      final futures = Future.wait<int>([
-        returnOneAsync(),
-        returnTwoAsync(),
-        returnThreeAsync(),
-      ]);
-      futures.then((List<int> value) {
-        int total = 0;
-        for (var element in value) {
-          total += element;
-        }
-        setState(() {
-          result = total.toString();
-        });
-      });
+    // void returnFG() {
+    //   // FutureGroup<int> futureGroup = FutureGroup<int>();
+    //   // futureGroup.add(returnOneAsync());
+    //   // futureGroup.add(returnTwoAsync());
+    //   // futureGroup.add(returnThreeAsync());
+    //   // futureGroup.close();
+    //   final futures = Future.wait<int>([
+    //     returnOneAsync(),
+    //     returnTwoAsync(),
+    //     returnThreeAsync(),
+    //   ]);
+    //   futures.then((List<int> value) {
+    //     int total = 0;
+    //     for (var element in value) {
+    //       total += element;
+    //     }
+    //     setState(() {
+    //       result = total.toString();
+    //     });
+    //   });
+    // }
+
+    Future returnError() async {
+      await Future.delayed(const Duration(seconds: 2));
+      throw Exception('Something terrible happened!');
     }
 
     return Scaffold(
@@ -132,7 +137,19 @@ class _FuturePageState extends State<FuturePage> {
                 //     .catchError((e) {
                 //       result = 'An error occurred';
                 //     });
-                returnFG();
+                // returnFG();
+                returnError()
+                    .then((value) {
+                      setState(() {
+                        result = 'Success';
+                      });
+                    })
+                    .catchError((onError) {
+                      setState(() {
+                        result = onError.toString();
+                      });
+                    })
+                    .whenComplete(() => print('Complete'));
               },
             ),
             const Spacer(),
