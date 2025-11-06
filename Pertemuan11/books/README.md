@@ -77,3 +77,9 @@ API: [Google API](https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC)
 - Tidak ada, hanya waktu tunggu agak lama. Hal ini dikarenakan tidak ada UI yang diubah, hanya memecah fungsi dan menambahkan durasi delay.
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README!
 - ![SS Browser](img/gif7.gif)
+
+## Soal 14
+1. Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+- Tidak ada, karena hanya menambahkan error handling ketika terjadi kegagalan saat koneksi sudah stabil
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+- ![SS Browser](img/gif7.gif)
