@@ -52,3 +52,7 @@ API: [Google API](https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC)
 ## Soal 9
 1. Capture hasil praktikum Anda berupa GIF dan lampirkan di README
 - ![SS Browser](img/gif5.gif)
+
+## Soal 10
+1. Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
+- Fungsi ```returnError``` dibuat untuk menampilkan pesan error ketika sebuah baris kode gagal dijalankan. Pada langkah 4, fungsi ```handleError()``` menggunakan ```try...catch...finally``` agar aplikasi tidak crash ketika mendapati error.
