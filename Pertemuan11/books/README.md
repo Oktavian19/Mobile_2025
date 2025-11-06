@@ -71,3 +71,9 @@ API: [Google API](https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC)
 - Muncul, karena browser juga dapat mengakses lokasi dari laptop
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README!
 - ![SS Browser](img/gif6.gif)
+
+## Soal 13
+1. Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+- Tidak ada, hanya waktu tunggu agak lama. Hal ini dikarenakan tidak ada UI yang diubah, hanya memecah fungsi dan menambahkan durasi delay.
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README!
+- ![SS Browser](img/gif7.gif)
