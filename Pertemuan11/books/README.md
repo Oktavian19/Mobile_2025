@@ -40,3 +40,7 @@ API: [Google API](https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC)
 - Langkah 6 menambahkan kode untuk menangani error jika terjadi kegagalan
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 - ![SS Browser](img/gif3.gif)
+
+## Soal 7
+1. Capture hasil praktikum Anda berupa GIF dan lampirkan di README!
+- - ![SS Browser](img/gif4.gif)
