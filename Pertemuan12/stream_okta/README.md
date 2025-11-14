@@ -39,6 +39,7 @@
 1. Jelaskan perbedaan menggunakan listen dan await for!
 - Fungsi listen tidak menunggu stream selesai dan dapat menggunakan subscription controller (resume, pause, cancel). Sedangkan await for digunakan pada fungsi async
 
+## Praktikum 2
 ### Soal 6
 1. Jelaskan maksud kode langkah 8 dan 10 tersebut!
 - Kode langkah 8 membuat obbjek stream dan mengambil StreamController dari objek tersebut. Stream dari controller kemudian disimpan menjadi variabel dan mendaftarkan listener ke stream agar widget tahu setiap ada data baru. Sedangkan kode pada langkah 10 merupakan fungsi yang membuat angka acak antara 0 sampai 9 dan mengirimkannya ke stream melalui fungsi addNumberToSink dan NumebrStream.
@@ -55,3 +56,10 @@
 - Menggunakan StreamTransformer untuk memproses data dan error dari stream yaitu dengan melakukan kali 10 pada value dari stream
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 - ![gif](img/gif2.gif)
+
+## Praktikum 4
+### Soal 9
+1. Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+- Setelah ditambahkan StreamSubscription, stream akan didengarkan melalui subscription tersebut. Subsciption dapat dihentikan dengan ```subscription.cancel()``` sehingga stream akan ditutup dan hanya memberikan value -1
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+- ![gif](img/gif3.gif)
