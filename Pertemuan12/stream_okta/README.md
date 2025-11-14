@@ -63,3 +63,15 @@
 - Setelah ditambahkan StreamSubscription, stream akan didengarkan melalui subscription tersebut. Subsciption dapat dihentikan dengan ```subscription.cancel()``` sehingga stream akan ditutup dan hanya memberikan value -1
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 - ![gif](img/gif3.gif)
+
+## Praktikum 5
+### Soal 10
+1. Jelaskan mengapa error itu bisa terjadi ?
+- error tersebut terjadi karena terdapat dua stream yang ingin didengarkan sekaligus, sedangkan stream tersebut merupakan single-subscription stream
+
+### Soal 11
+1. Jelaskan mengapa hal itu bisa terjadi ?
+- Hal itu dapat terjadi karena tipe broadcast stream dapat menampung lebih dari 1 stream dan kedua stream tersebut dijalankan bersamaan ketika tombol new random number diklik.
+
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+- ![gif](img/gif4.gif)
